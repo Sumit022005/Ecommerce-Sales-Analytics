@@ -38,4 +38,4 @@ The company wants to analyze sales performance, identify top products, and impro
 ##  SQL Analysis Output
 
 ![SQL Output](dashboard/sql_output.png)
-![SQL Output](dashboard/sql_output 01.png)
+![SQL Output](dashboard/sql_output1.png)
