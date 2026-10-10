@@ -61,7 +61,7 @@ def run_queries(conn, cols):
         AVG({cols['sales']}) AS avg_order_value
     FROM orders
     """
-    print("\n📊 KPI Metrics:")
+    print("\n KPI Metrics:")
     print(pd.read_sql(query_kpi, conn))
 
     # Category Analysis
@@ -73,7 +73,7 @@ def run_queries(conn, cols):
     GROUP BY category
     ORDER BY revenue DESC
     """
-    print("\n📊 Category Performance:")
+    print("\n Category Performance:")
     print(pd.read_sql(query_category, conn))
 
     # Region Analysis
@@ -84,7 +84,7 @@ def run_queries(conn, cols):
     GROUP BY region
     ORDER BY total_profit DESC
     """
-    print("\n📊 Region Profit:")
+    print("\n Region Profit:")
     print(pd.read_sql(query_region, conn))
 
     # Top Products (Advanced Ranking)
@@ -96,7 +96,7 @@ def run_queries(conn, cols):
     GROUP BY product
     LIMIT 10
     """
-    print("\n🏆 Top Products:")
+    print("\n Top Products:")
     print(pd.read_sql(query_products, conn))
 
     # Monthly Trend
@@ -107,7 +107,7 @@ def run_queries(conn, cols):
     GROUP BY month
     ORDER BY month
     """
-    print("\n📈 Monthly Sales Trend:")
+    print(" \n Monthly Sales Trend:")
     print(pd.read_sql(query_month, conn))
 
     # Profit Margin (Advanced KPI)
@@ -116,7 +116,7 @@ def run_queries(conn, cols):
         (SUM({cols['profit']}) / SUM({cols['sales']})) * 100 AS profit_margin
     FROM orders
     """
-    print("\n💰 Profit Margin:")
+    print("\n Profit Margin:")
     print(pd.read_sql(query_margin, conn))
 
 # ---------------------------
@@ -132,7 +132,7 @@ def main():
     run_queries(conn, cols)
 
     conn.close()
-    print("\n✅ All queries executed successfully!")
+    print("\n All queries executed successfully!")
 
 # ---------------------------
 # Run Script

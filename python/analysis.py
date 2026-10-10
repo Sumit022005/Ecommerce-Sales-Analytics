@@ -124,7 +124,7 @@ if customer_col:
 # ---------------------------
 # 8. Insights (Auto Generated)
 # ---------------------------
-print("\n📊 Key Insights:")
+print("\n Key Insights:")
 
 print(f"- Top Category: {category_sales.idxmax()}")
 print(f"- Most Profitable Region: {region_profit.idxmax()}")
